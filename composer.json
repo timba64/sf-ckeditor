@@ -1,5 +1,7 @@
 {
-    "type": "project",
+	"name": "ns/newstudio",
+	"description": "project temp for edu",  
+	"type": "project",
     "license": "proprietary",
     "minimum-stability": "dev",
     "prefer-stable": true,
