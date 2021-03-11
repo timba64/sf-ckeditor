@@ -33,7 +33,9 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linktoDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('News', 'fas fa-newspaper', News::class);
         yield MenuItem::linkToCrud('Tag', 'fas fa-tags', Tag::class);
-				yield MenuItem::linkToUrl('Home', 'fa fa-home', '/');
-        // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
+				yield MenuItem::section('Service');
+				//yield MenuItem::linkToRoute('Home', 'fa fa-home', 'homepage');
+				yield MenuItem::linkToUrl('to Frontend', 'fa fa-archway', '/');
+        // yield MenuItem::linkToCrud('The Label', 'fas fa-accusoft', EntityClass::class);
     }
 }
