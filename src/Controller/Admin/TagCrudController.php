@@ -24,17 +24,18 @@ class TagCrudController extends AbstractCrudController
 
             // the Symfony Security permission needed to manage the entity
             // (none by default, so you can manage all instances of the entity)
-            ->setEntityPermission('ROLE_ADMIN')
+            //->setEntityPermission('ROLE_ADMIN')
             // the visible title at the top of the page and the content of the <title> element
             // it can include these placeholders: %entity_id%, %entity_label_singular%, %entity_label_plural%
             ->setPageTitle('index', '%entity_label_plural% listing')
+						->setDefaultSort(['name' => 'ASC'])
         ;
     }
 
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
+            IdField::new('id')->setFormTypeOption('disabled', true),
             TextField::new('name'),
         ];
     }
