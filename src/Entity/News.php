@@ -64,6 +64,11 @@ class News
      */
     private $tag;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $slug;
+
     public function __construct()
     {
         $this->tag = new ArrayCollection();
@@ -190,6 +195,18 @@ class News
     public function removeTag(Tag $tag): self
     {
         $this->tag->removeElement($tag);
+
+        return $this;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
 
         return $this;
     }
