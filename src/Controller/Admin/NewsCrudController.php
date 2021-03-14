@@ -12,7 +12,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 class NewsCrudController extends AbstractCrudController
 {
     public static function getEntityFqcn(): string
@@ -42,7 +42,7 @@ class NewsCrudController extends AbstractCrudController
 				yield TextField::new('title');
 				yield AssociationField::new('tag')->hideOnIndex();
 				yield DateTimeField::new('published_at');
-				yield TextareaField::new('description')->onlyOnForms();
+				yield TextareaField::new('description')->onlyOnForms()->setFormType(CKEditorType::class);
 				yield TextEditorField::new('content');
 				yield TextEditorField::new('excerpt');
 				yield BooleanField::new('draft');
