@@ -9,7 +9,7 @@ easy_admin:
             class: App\Entity\News
             form:
                 fields:
-                    - {property: 'description', type: 'fos_ckeditor'}
+                    - {property: 'description', type: 'fos_ck_editor'}
                     - {property: 'content', type: 'fos_ckeditor'}
         Tag:
             class: App\Entity\Tag

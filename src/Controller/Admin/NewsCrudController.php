@@ -32,7 +32,8 @@ class NewsCrudController extends AbstractCrudController
             // the visible title at the top of the page and the content of the <title> element
             // it can include these placeholders: %entity_id%, %entity_label_singular%, %entity_label_plural%
             ->setPageTitle('index', '%entity_label_plural% listing')
-						->setDefaultSort(['published_at' => 'DESC'])
+            ->addFormTheme('@FOSCKEditor/Form/ckeditor_widget.html.twig')
+			->setDefaultSort(['published_at' => 'DESC'])
         ;
     }
 
@@ -42,8 +43,8 @@ class NewsCrudController extends AbstractCrudController
 				yield TextField::new('title');
 				yield AssociationField::new('tag')->hideOnIndex();
 				yield DateTimeField::new('published_at');
-				yield TextareaField::new('description')->onlyOnForms()->setFormType(CKEditorType::class);
-				yield TextEditorField::new('content');
+				yield TextareaField::new('description')->onlyOnForms();
+				yield TextEditorField::new('content')->setFormType(CKEditorType::class);
 				yield TextEditorField::new('excerpt');
 				yield BooleanField::new('draft');
     }
