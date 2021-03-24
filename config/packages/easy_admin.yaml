@@ -3,6 +3,10 @@ easy_admin:
         form_theme:
             - '@EasyAdmin/form/bootstrap_4.html.twig'
             - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
+        assets:
+            js:
+                - '/bundles/cksourceckfinder/ckfinder/ckfinder.js'
+                - '/js/setup-ckfinder.js'
     entities:
         # List the entity class name you want to manage
         News:

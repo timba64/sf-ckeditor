@@ -33,7 +33,7 @@ class NewsCrudController extends AbstractCrudController
             // it can include these placeholders: %entity_id%, %entity_label_singular%, %entity_label_plural%
             ->setPageTitle('index', '%entity_label_plural% listing')
             ->addFormTheme('@FOSCKEditor/Form/ckeditor_widget.html.twig')
-			->setDefaultSort(['published_at' => 'DESC'])
+						->setDefaultSort(['published_at' => 'DESC'])
         ;
     }
 
