@@ -1,11 +1,11 @@
 # sf-ckeditor
-CKEditor doesn't appear on page edit in EasyAdmin
+CKEditor work fine in EasyAdmin
 
-делал вот по этой инструкции
+now i try to implement CKFinder (ckfinder-symfony-bundle - 3.5.1.5) in Symfony 5.1
 
-https://symfony.com/doc/2.x/bundles/EasyAdminBundle/integration/ivoryckeditorbundle.html
+I followed by this Article https://medium.com/suleyman-aydoslu/implementing-ckeditor-and-ckfinder-on-easyadmin-a269888771ce
+but it isn't help me.
 
-Установил EasyAdmin, установил CKEditor - хочу вывести вместо textarea CKEditor - не получается
-http://127.0.0.1:8000/bundles/fosckeditor/ckeditor.js
-
-ckeditor.js - файл существует, но не подгружается на странице админки 
+In https://github.com/ckfinder/ckfinder-symfony-bundle i read that we should insert the Main CKFinder JavaScript File in Templates
+ but how could i make this ??
+I don't see ckfinder.js on the page.
